@@ -1,0 +1,18 @@
+<table *ngIf="projects.length>0; else empty">
+  <tr *ngFor="let p of projects">
+    <td>
+      <span>{{ p.id }}</span> - <span>{{ p.name }}</span>
+    </td>
+    <td>
+      <input value="Delete"
+             type="button"
+             (click)="deleter.emit(p.id)" />
+    </td>
+    <td>
+      <input value="View"
+             type="button"
+             (click)="viewer.emit(p)" />
+    </td>
+  </tr>
+</table>
+<ng-template #empty> <i>No data yet</i> </ng-template>

@@ -1,0 +1,33 @@
+<form>
+
+  <fieldset>
+
+    <legend>NEW PROJECT</legend>
+
+    <section>
+      <table>
+        <tr>
+          <td>
+            <label for="name">Name:</label>
+          </td>
+          <td>
+            <input name="name"
+                   type="text"
+                   [(ngModel)]="name"
+                   placeholder="Project name" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan=3>
+            <input value="Save"
+                   type="submit"
+                   (click)="creator.emit(name)" />
+          </td>
+        </tr>
+      </table>
+
+    </section>
+
+  </fieldset>
+
+</form>

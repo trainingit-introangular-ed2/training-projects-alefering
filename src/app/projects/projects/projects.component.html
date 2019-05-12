@@ -1,0 +1,11 @@
+<app-filter-projects-form (filter)="filterProjects($event)"></app-filter-projects-form>
+
+<app-projects-list [projects]="lstProjects"
+                   (deleter)="deleteProject($event)"
+                   (viewer)="viewProject($event)"></app-projects-list>
+
+<app-new-project-form (creator)="saveProject($event)"></app-new-project-form>
+
+<app-viewer-project-form [viewedProject]="project"></app-viewer-project-form>
+
+<router-outlet></router-outlet>

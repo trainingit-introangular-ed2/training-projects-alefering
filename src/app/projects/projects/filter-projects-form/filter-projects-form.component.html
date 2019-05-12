@@ -1,0 +1,21 @@
+<form>
+
+  <fieldset>
+
+    <legend>FILTER PROJECTS</legend>
+
+    <section>
+      <label for="name">Name:</label>
+      <input name="name"
+             type="text"
+             [(ngModel)]="filterName"
+             placeholder="Filter name" />
+    </section>
+
+    <input value="Find"
+           type="submit"
+           (click)="filter.emit(filterName)" />
+
+  </fieldset>
+
+</form>
